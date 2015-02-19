@@ -22,9 +22,5 @@ app.controller('ChatCtrl', ['$scope', '$firebase', function($scope, $firebase) {
 		$scope.newMessageText = ""
 	}
 
-	$scope.setName = function(name) {
-		$scope.hideNameBox = true
-	}
-
 }])
 

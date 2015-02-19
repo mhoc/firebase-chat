@@ -31,15 +31,6 @@
     </form>
     <h3 ng-show="authData">Signed in as {{authData.facebook.displayName}}</h3>
 
-<!--
-	<form ng-submit="setName(name)" ng-hide="hideNameBox" class="form-inline">
-		<div class="form-group">
-			<input ng-model="name" class="form-control" placeholder="Name" />
-		</div>
-		<button type="submit" class="btn btn-primary">Set Name</button>
-	</form>
--->
-
 	<table class="table table-hover">
 		<tr ng-repeat="message in messages">
 			<td><b>{{message.sender}}</b></td>
