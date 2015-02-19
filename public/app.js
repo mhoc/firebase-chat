@@ -8,12 +8,12 @@ app.controller('ChatCtrl', ['$scope', '$firebase', function($scope, $firebase) {
 	
 	var sync = $firebase(msgRef)
 
-	$scope.hideNameBox = false
 	$scope.messages = sync.$asArray()
 
 	$scope.signin = function() {
 		baseRef.authWithOAuthPopup('facebook', function(error, authData) {
 			$scope.authData = authData
+			$scope.$digest()
 		})
 	}
 
