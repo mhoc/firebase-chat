@@ -8,7 +8,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	<!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
     	
 	<!-- Firebase -->
 	<script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
@@ -24,30 +24,29 @@
 <body ng-controller="ChatCtrl">
 <div class="container">
 
-	<h1>AnvilChat</h1>
+    <h1>AnvilChat</h1>
 
 	<form ng-submit="signin()" ng-hide="authData">
-    	<input type="submit" class="btn btn-primary" value="Login With Facebook" />
-    </form>
-    <h3 ng-show="authData">Signed in as {{authData.facebook.displayName}}</h3>
+		<input type="submit" class="btn btn-primary" value="Login With Facebook" />
+	</form>
+	<h3 ng-show="authData">Signed in as {{authData.facebook.displayName}}</h3>
 
 	<table class="table table-hover">
 		<tr ng-repeat="message in messages">
 			<td><b>{{message.sender}}</b></td>
 			<td>{{message.text}}</td>
-			<td>{{message.date}}</td>
 			<td>
-				<button ng-click="messages.$remove(message)" type="button" class="btn btn-default">
-					<span class="glyphicon glyphicon-remove"/>
-				</button>
+			<button ng-click="messages.$remove(message)" type="button" class="btn btn-default">
+				<span class="glyphicon glyphicon-remove"/>
+			</button>
 			</td>
 		</tr>
 	</table>
 
 	<form ng-submit="addMessage(newMessageText)" class="form">
-      	<input ng-model="newMessageText" class="form-control" placeholder="Message" />
-      	<input type="submit" style="position: absolute; left: -9999px"/>
-    </form>
+      		<input ng-model="newMessageText" class="form-control" placeholder="Message" />
+      		<input type="submit" style="position: absolute; left: -9999px"/>
+    	</form>
 
 </div>	
 </body>
